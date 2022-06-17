@@ -1,14 +1,10 @@
 <?php
 spl_autoload_register(function($class){
-    $baseDir[] = [
-        __DIR__."/Mecanica"
-    ];
+    $baseDir = __DIR__.'/classes/';
 
-    foreach($baseDir as $base){
-        $file = $base.str_replace('\\', '/', $class).'.php';
+    $file = $baseDir.str_replace('\\', '/', $class).'.php';
 
-        if(file_exists($file)){
-            require $file;
-        }
+    if(file_exists($file)){
+        require $file;
     }
 });
