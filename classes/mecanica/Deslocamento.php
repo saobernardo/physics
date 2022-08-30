@@ -1,6 +1,7 @@
 <?php
 
-namespace mecanica;
+
+require_once '../../vendor/autoload';
 
 class MovimentoUniforme implements MovimentoUniforme{
     private $referencial = 0;
